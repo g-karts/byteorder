@@ -1944,7 +1944,7 @@ macro_rules! unsafe_read_slice {
 macro_rules! unsafe_write_slice_native {
     ($src:expr, $dst:expr, $ty:ty) => {{
         let size = core::mem::size_of::<$ty>();
-        assert_eq!(size * $src.len(), $dst.len());
+       // assert_eq!(size * $src.len(), $dst.len());
 
         unsafe {
             copy_nonoverlapping(
@@ -1958,8 +1958,8 @@ macro_rules! unsafe_write_slice_native {
 
 macro_rules! write_slice {
     ($src:expr, $dst:expr, $ty:ty, $size:expr, $write:expr) => {{
-        assert!($size == ::core::mem::size_of::<$ty>());
-        assert_eq!($size * $src.len(), $dst.len());
+        //assert!($size == ::core::mem::size_of::<$ty>());
+        //assert_eq!($size * $src.len(), $dst.len());
 
         for (&n, chunk) in $src.iter().zip($dst.chunks_mut($size)) {
             $write(chunk, n);
