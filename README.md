@@ -1,6 +1,6 @@
 byteorder
 =========
-THIS IS UNSAFE, IT'S FOR INTERNAL USE WITHIN G-RUST ALL INPUT IS SANTISED/VALIDATED.
+THIS IS UNSAFE, IT'S FOR INTERNAL USE WITHIN G-RUST ALL INPUT IS SANTISED/VALIDATED PRIOR TO USING THIS LIBRARY!
 =========
 This crate provides convenience methods for encoding and decoding
 numbers in either big-endian or little-endian order.
