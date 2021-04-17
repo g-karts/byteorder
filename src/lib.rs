@@ -1920,7 +1920,7 @@ macro_rules! unsafe_write_num_bytes {
 /// where $size represents the size of the integers encoded in $src.
 macro_rules! unsafe_read_slice {
     ($src:expr, $dst:expr, $size:expr, $which:ident) => {{
-        assert_eq!($src.len(), $size * $dst.len());
+        //assert_eq!($src.len(), $size * $dst.len());
 
         unsafe {
             copy_nonoverlapping(
